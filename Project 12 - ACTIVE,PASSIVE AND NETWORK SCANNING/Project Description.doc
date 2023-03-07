@@ -1,0 +1,15 @@
+First Activity - Passive Information Gathering: 
+Passive information gathering require you to gather information about the target without interacting with it. Make a report out of it which include your results, scan steps. 
+References: http://www.technicalinfo.net/papers/PassiveInfoPart1.html http://www.securitysift.com/passive-reconnaissance/.
+
+Second Activity - Active Information Gathering:
+Active information gathering means to scan your target directly with the help of security scanning tools such as Maltego. Read through the references and try to use Maltego to gather as much information as possible. Make a report of your findings.
+References:
+https://null-byte.wonderhowto.com/how-to/hack-like-pro-conduct-active-reconnaissance-and-dos-attacks-with-nmap-0146950/ http://www.pearsonitcertification.com/articles/article.aspx?p=472323&seqNum=5.
+https://securitytrails.com/blog/top-20-intel-tools
+
+Third Activity - Network Scanning: 
+Network scanning is similar to active information gathering. Use information gathered from the last 2 activities to perform this activity. This activity focuses on scanning the network of your target, getting the idea about the structure of your target and finding about the services running on your target. This will help you in finding vulnerabilities in next level. Now complete your report and submit it. 
+References:
+https://blog.netspi.com/10-techniques-for-blindly-mapping-internal-networks/ 
+https://null-byte.wonderhowto.com/how-to/hack-like-pro-advanced-nmap-for-reconnaissance-0151619/.
