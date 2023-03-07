@@ -1,0 +1,61 @@
+Linux lab1  – Using Linux firewall (iptables) to block ssh and ICMP
+
+Pre-lab configuration
+
+1) Make sure you have a working guest Linux box and a host Windows box
+2) Check your internet connection, you can either use NAT or bridged mode for pre-lab
+configuration. But for the lab part, you should use either bridged or host-only mode in VMWare. NAT mode will not work for testing the iptables rules.
+3) Update your Linux box with root user, use “apt-get update && apt-get upgrade” 
+4) Download PuTTY – a free SSH client from
+http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html on your host Windows
+computer
+5) You need to download and install OpenSSH server at your guest computer (Linux computer), here is the process:
+6) Being root, type “apt-get install openssh-server”, it will install the OpenSSH server, then start it
+by typing “service ssh start”. Now you have a running ssh server and
+you connect to it via PuTTY from your Windows box. You can also check the status of your ssh
+server by typing “service ssh status”. To stop, use “service ssh stop” 
+7) Now get back to your group user account and install iptables from there. Use “sudo apt-get
+install iptables” . Please use your group account from this step and
+not root, if you need root privilege you can use sudo in front. Most of the Linux distributions
+come with iptables preinstalled, but if you run the previous command, it will upgrade it anyway,
+if not then will install it.
+
+Lab
+1) Now you no longer need the internet, you can change your VMWare Linux box’s adapter
+settings to either bridged or host only mode.
+2) In your Linux box, run “sudo ifconfig” and note down your eth0 (or equivalent) IP address for the
+machine . In your Windows box, go to Start, run “cmd” in order to
+get a command line interface, then type “ipconfig /all” to get your IP address. 
+3) Ping your Linux box from Windows box: “ping <ip address>”. Also ping your Windows box from
+Linux box (take screenshot – 1 mark). Please note in Windows machine, by default there are 4
+ICMP ping requests send and the process will stop after that, whereas in Linux machine, it will
+continue to ping until and unless you hit “Ctrl+c” to manually stop it.
+4) Now use PuTTY from Window box to connect to your Linux box, make sure you click “SSH” options and the default port 22 to connect in. 
+5) Do some browsing in the file system, isn’t it fun to use your Linux box remotely via SSH?
+6) Now close the connection, by crossing the window or typing “exit” 
+7) Now we will configure the firewall in Linux known as iptables to make sure your Windows box
+cannot ping or establish SSH to the Linux box. We will set some firewall rules. 
+8) Check the existing list of iptables in your Linux box, use “iptables -L -v” (-L to list and –v to use
+verbose mode). 
+9) Use “sudo iptables -L | grep policy” to see the policy of the firewall .
+10) Now let’s see some new rules. Rule to drop ICMP ping request to come inside sudo iptables -A INPUT -p icmp --icmp-type 8 -j
+DROP
+Rule to block incoming SSH connection/traffic sudo iptables -A INPUT -p tcp --dport ssh -s
+10.10.8.10 -j DROP
+Rule to reject ICMP ping request to come inside sudo iptables -A INPUT -p icmp --icmp-type 8 -j
+REJECT
+Command to flash existing rules sudo iptables –F
+Command to save the rules sudo /sbin/iptables-save
+Command to see the existing rule list sudo iptables –L
+11) Here, -A is to amend or change the firewall rules. –p is to specify the protocol, -j is to specify the
+actions, in this case DROP or REJECT, -s is to specify the source IP address (that should be your
+Windows machine)
+12) Now enter the command to block SSH incoming connections
+13) Go back to Windows box, and try with PuTTY, can you login? What error message do you see?
+14) Now enter the command to drop ICMP ping request to come inside. Try to ping from Windows
+box. 
+15) Now try to ping Windows box from the Linux box, what do you see? 
+
+16) Now flash the existing rules 
+
+17) Now enter the command to reject ICMP ping request to come inside . Try to ping from Windows boX
