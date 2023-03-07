@@ -1,0 +1,32 @@
+Linux lab task 2 – Snort
+Pre-lab configuration
+1) Make sure you have a working guest Linux box and a host Windows box
+2) Check your internet connection, you can either use NAT or bridged mode for this lab
+configuration. But bridged mode is preferred.
+3) Update your Linux box with root user, use “apt-get update && apt-get upgrade”
+
+Lab
+1) Use your group account from now on, you might have to use sudo in most of the cases.
+2) Install Snort using “sudo apt-get install snort” ”
+3) Start Snort using “sudo service snort start” ” 
+4) Run Snort in sniffer mode with “sudo snort -vde” – you see how Snort captures your IP packets?
+
+5) Now stop Snort sniffing with ctrl+c
+6) Now run Snort again in sniffer mode but save the output in a text file of your group name “sudo
+snort –vde > groupname.txt” (keep it running)
+7) Now we will test if Snort captures the login username and password of a non-secure site
+8) Go to http://testing-ground.scraping.pro/login
+9) Login with ‘admin’ and ‘12345’ as login credentials
+10) When you are logged in successfully in that website, stop Snort by ctrl+c
+11) Open the text file with Gedit “gedit groupname.txt”
+ 12) Try to find the user name and password with text search
+13) You see? You were able to get the credentials, walah! This is your first hack  it is that easy to
+capture login credentials if a website is not secured.
+ 14) So far we are running Snort in sniffer mode, now we will run Snort in Intrusion Detection Mode
+(IDS Mode). 15) Open the texfile called snort.conf with gedit or vi “sudo gedit /etc/snort/snort.conf” 
+16) Go to the part where it says, ipvar HOME_NET, change the value from any to your virtual
+machine’s subnet. For example if your network is 192.168.20.1 and subnet is 255.255.255.0, put
+192.168.20.0/24
+17) Remove the # from ipvar EXTERNAL_NET then change ipvar EXTERNAL_NET to !$HOME_NET
+18) Save the file and run Snort again “sudo snort -vde” Now we are running in IDS mode
+19) Stop Snort by ctrl+c
