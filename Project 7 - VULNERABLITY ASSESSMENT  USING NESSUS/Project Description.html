@@ -1,0 +1,48 @@
+Vulnerability assessment with Nessus
+
+
+Pre-lab configuration
+
+1) Make sure you have a working Linux box
+2) Check your internet connection, you can either use NAT or bridge mode for this lab
+3) Update your Linux box 
+4) You need to have a working email address for this lab
+
+5) Use any web browser such as Firefox ESR or Ice Weasel to go to
+https://www.tenable.com/products/nessus/nessus-plugins/obtain-an-activation-code
+This is the page where you need to register a Free Home user with your email address in order
+to get an activation code. The activation code will be emailed to your email address.
+6) Then go to the download page (https://www.tenable.com/products/nessus/select-your- operating-system#download) to download your suitable version - Debian 6, 7, 8 / Kali Linux 1
+AMD64 or Debian 6, 7, 8 / Kali Linux 1 i386(32-bit) or any of your favorite Linux distribution. Download it.
+7) Open up a terminal window, navigate to your Downloads folder
+8) Use your team user account (do not use root), use “sudo dpkg -i <Nessus-6……>” to install
+Nessus on your system. Dpkg is the package manager in Debian system and “-i” is the command
+to install a package. (take screenshot) - 1 mark
+9) Check the status of the Nessus package on the system, use “sudo /etc/init.d/nessusd status”
+
+10) Now start the Nessus daemon, use “sudo /etc/init.d/nessusd start” 
+11) Now go back to your browser, type https://127.0.0.1:8834 to login to the Nessus web interface. Please make sure you type 8834 port as Nessus by default use this port for the web interface. You might see “connection not secure” message, click “Advanced” and “Add Exception” ->
+“Confirm Security Exception”. 
+12) You will see the Nessus welcome page, click continue. Create a username and put a password. The username should be your team name. Now put the activation code you already received in
+email and put it in there. Now Nessus will start to download its essential plugins and features. It
+might take a while. 
+13) Now login to the Nessus web portal with your username and password, you will see your
+username on top right corner.
+14) Before you proceed any further, we need to check the ip address of your Linux box. We will run
+Nessus vulnerability scan on that. So go back to terminal and type “sudo ifconfig -a” and note
+your ip address. (Usually the IP for eth0 interface, might differ though) 
+mark Let us assume you record your IP address to be 192.168.136.128 with netmask
+255.255.255.0
+15) Go back to the Nessus web portal and click “New Scan” then choose “Basic Network Scan” 
+16) Give a name to your scan. Recommended format: YourGroupName_FirstScan
+17) Put the target as the IP address subnet of your Linux box. So we assumed in step 10 that the IP
+address of my Linux box is 192.168.136.128 with netmask 255.255.255.0. So here I will enter
+192.168.136.0/24 as target machines. Save it. 
+18) Now click the launch button on right side of the scan to start the scan. (looks like a “play”
+symbol of old diskman ) 
+19) Now double click on the scan, then you will see the list of Hosts with IP addresses that are
+scanning. Go to the next tab called “Vulnerabilities” 
+20) Now go back to your scans and wait for the scan to finish. It might take a while. There are two
+green color curve arrows moving in circle that means the scan is still in progress. 
+21) After the scan is finished, double click on the scan. Then you will see the Export options. Export
+the scan in PDF with “Executive Summary” 
