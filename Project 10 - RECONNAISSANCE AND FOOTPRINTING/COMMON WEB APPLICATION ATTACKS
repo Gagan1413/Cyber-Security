@@ -1,0 +1,14 @@
+This project we will talk about comman web application attacks:
+
+1 Parameter/Form Tampering	
+2 Cookie Tampering	
+3 Unvalidated Input and File Injection attacks
+4 Session hijacking	
+5 SQL injection attack:
+6 Directory Traversal Attack	
+7 Denial-of-service Attack	
+8 Cross Site Scripting (XSS)	
+9. Buffer Overflow Attack	
+10. Cross Site Request Forgery (CSRF) Attack
+11. Command Injection Attacks	
+12 Source code
