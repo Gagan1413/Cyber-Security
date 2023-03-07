@@ -1,0 +1,14 @@
+I’ll be scanning:
+1.	My network/router
+2.	Website(tutorialspoint.com)
+3.	My Vmware Machine
+For this, I’ll be performing 3 Scans of each on the basis of IP address, Ports, Services, and OS details.
+Commands used:
+•	Nmap [ipaddress] for scanning ports 
+•	Nmap -F [ipaddress] for faster scanning
+•	Nmap -p 1-65535 [ipaddress] for scanning all ports
+•	Nmap -open [ipaddress] to show open ports
+•	Nmap -sV [ipaddress] to show services of open ports
+•	Nmap -O [ipaddress] to show OS 
+•	Nmap -O –osscan-guess [ipaddress] to guess OS
+•	Nmap -A -T4 [ipaddress] for faster OS and Service detection
