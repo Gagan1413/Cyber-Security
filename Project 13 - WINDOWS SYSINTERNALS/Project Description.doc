@@ -1,0 +1,28 @@
+Part 1: Sysinternals
+In this part of the lab, you will look at the Sysinternals suite of tools. IT Security experts often use these tools to remove malware from MS operating systems.  Your activity will be to work through How-To Geek SysInternal Tutorials, Lessons 1,2. 
+
+To get some background on Sysinternals do Lesson 1 first. 
+
+1.	Start your windows virtual machine.
+2.	Install Sysinternals, go through lesson 1 to 2
+3.	In the Sysinternal folder there is an application named ‘procexp’, this is the executable of an application called “Process Explorer”.  You’ll be using it in this lab.
+
+Part 2: Determining the cost of a scan 
+Doing a scan of a host on the network might seem the obvious and easiest thing to do. However, such scans generate traffic.  Let’s capture that traffic and see how much there is.
+
+NB: 
+•	There is only general guidance given for this part of the lab.  You are expected to do research etc. to find out any information you don’t know.
+
+Steps
+1.	Start Wireshark on your Windows VM and begin Capture. How much of traffic do you see?
+2.	Using the command-line on Kali, use Nmap to do ‘all ports TCP Connect scan’ of your Windows VM.
+3.	Stop your Wireshark capture on Windows VM once the Nmap scan is complete.
+4.	Review your Wireshark capture to see the volume of traffic an ‘uncontrolled’ scan can generate.
+5.	Under a heading “Part 2: Scan Costs” in your report, capture screenshots (at least 6) and insert them under the appropriate sub-headings that show the following:
+•	The Windows VM IP’s address 
+•	The Kali VM’s IP address
+•	Kali’s desktop with the command-line window visible, with the Nmap command-line and some of Nmap results visible.  Make sure the Nmap command that you used is visible in the screenshot.
+•	Wireshark open showing the:
+	Start of the Windows VM scan’s capture, means the very first packets in the Wireshark.
+	Mid-section of the Windows VM scan’s capture which means the middle packets in the Wireshark.  
+	End of the Windows VM scan’s capture which means the very last packets in the Wireshark.
