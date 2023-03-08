@@ -1,0 +1,20 @@
+SPLUNK SEARCH, SOAR PLATFORM
+
+
+This report describes in detail about various features of Splunk and Splunk Phantom. 
+Such as the behavior of search queries in Splunk by executing various queries. 
+We will also be investigating a brute-force attack and analyze some events. By installing Splunk SOAR Phantom, we will be automating incident response tasks. 
+Also, investigate in detail about a security incident by uploading a .csv file.  
+
+
+
+LABS PERFORMED
+
+
+1 Splunk Search Query / Brute-Force attack 
+2 Incident response Brute-Force attack 
+3 SOAR- Phantom (Splunk)
+4 Incident response 
+
+
+  Conclusion

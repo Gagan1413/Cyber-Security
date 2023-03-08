@@ -1,0 +1,2 @@
+Abstract
+In this report, we described how to install Splunk and how to benefit from its features. Splunk is a software platform that enables users to monitor, analyze, and visualize machine-generated data. From adding agents to using Splunk forwarder to get more intuitive reports/logs to maintain your network infrastructure. Here, we have used 3 agents to showcase Splunk added ability to monitor and report logs in a concise manner.
