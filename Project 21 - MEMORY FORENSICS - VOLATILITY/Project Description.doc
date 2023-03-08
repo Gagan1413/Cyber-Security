@@ -1,0 +1,5 @@
+
+Volatility is an open-source memory forensics framework for incident response and malware analysis. 
+It is used to analyze crash dumps, raw dumps, number of processes, process id’s running. 
+Volatility is a powerful tool and can be used to get a load of information regarding DLL files. 
+In this activity we’ll utilize volatility and its different commands to understand more about these files.  
