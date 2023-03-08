@@ -1,0 +1,19 @@
+Module 17: Hacking Mobile Platforms	
+
+
+
+
+Lab Tasks	
+
+1: Hack Android Devices
+	Task 1 Hack an Android device by creating binary payloads using Parrot Security	
+	Task 2: Harvest users’ credentials using the Social-Engineer Toolkit	
+	Task 3: Launch a DoS Attack on a Target machine using Low Orbital Cannon (LOIC) on the Android Mobile Platform 
+	Task 4: Exploit the Android Platform through ADB using PhoneSploit
+
+
+	
+Lab 2: Secure Android Devices using Various Android Security Tools	
+	Task 1: Analyze a Malicious App using Online Android Analyzers	
+	Task 2: Analyze a Malicious App using Quixxi Vulnerability Scanner	 
+	Task 3: Secure Android Devices from Malicious Apps using Malwarebytes Security	
