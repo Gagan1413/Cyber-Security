@@ -1,0 +1,6 @@
+Module 10: Denial-of-Service ..................................................................................................................... 1
+Lab 1: Perform DoS and DDoS Attacks using Various Techniques ................................................................ 1
+Tasks 1: Perform a DoS Attack (SYN Flooding) on a Target Host using Metasploit .................................. 1
+Task 2: Perform a DoS Attack on a Target Host using hping3 ................................................................... 8
+Task 3: Perform a DDoS Attack using HOIC ............................................................................................. 20
+Task 4: Perform a DDoS Attack using LOIC ............................................................................................. 27
