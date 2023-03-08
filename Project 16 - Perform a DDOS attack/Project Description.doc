@@ -1,0 +1,14 @@
+This porject includes the following exercises:
+
+EXERCISE#1 Using hping3 DoS, attack hping3testsite by sending 3500 SYN packets of data size 100 to port 80 with 256 TCP window size from a random address.
+
+EXERCISE#2 Using nping TCP connect flood DoS, attack hping3testsite by sending TCP packets 1,000 times at 5,000 packets/second.	
+
+EXERCISE#3 Using hping3 DoS, attack hping3testsite with SYN packets from a random source. Send packets as fast as possible from spoofed IP, without taking care to show incoming replies.	
+
+EXERCISE#4 Using hping3 Simple Syn flood DoS, attack hping3testsite. Send packets as fast as possible from spoofed IP, without taking care to show incoming replies.
+	
+EXERCISE#5 Using hping3 DoS, attack hping3testsite by sending 500 SYN packets size 50 to port 21 with 128 TCP window size from a random address. Send packets as fast as possible from spoofed IP, without taking care to show incoming replies	
+
+EXERCISE#6 How do you think can hping3 DoS attack be prevented?	
+
