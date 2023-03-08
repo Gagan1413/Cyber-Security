@@ -1,0 +1,23 @@
+Module 08: Sniffing	
+
+
+In this Assignment, we have performed two attacks namely, network sniffing and social engineering. Basically, sniffing is a technique through which a person gets access on overall traffic in the network while leaving or entering the network. Here, we are going to sniff the packets and perform MAC flooding, MITM attack, password sniffing and many more. On the other hand, social engineering is one of the best techniques nowadays to attack target by sending phishing emails and fake sites. Today we will be going to detect usernames, passwords, personal details, and other important information with social engineering toolkit, and also perform and detect phishing using Netcraft, PhishTank.
+
+Lab 1: Perform Active Sniffing	
+	Task 1: Perform MAC Flooding using macof	
+	Task 2: Perform a DHCP Starvation Attack using Yersinia	
+	Task 3: Perform ARP Poisoning using Arp spoof	
+	Task 4: Perform a Man-in-the-Middle (MITM) Attack using Cain & Abel	
+	Task 5: Spoof a MAC Address using TMAC and SMAC	
+
+
+Lab 2: Perform Network Sniffing using Various Sniffing Tools	
+	Task 1: Perform Password Sniffing using Wireshark	
+	Task 2: Analyze a Network using the Omnipeek Network Protocol Analyzer	
+	Task 3: Analyze a Network using the SteelCentral Packet Analyzer	
+
+	
+Lab 3: Detect Network Sniffing		
+	Task 1: Detect ARP Poisoning in a Switch-Based Network		
+	Task 2: Detect ARP Attacks using XArp		
+	Task 3: Detect Promiscuous Mode using Nmap and NetScanTools Pro	
