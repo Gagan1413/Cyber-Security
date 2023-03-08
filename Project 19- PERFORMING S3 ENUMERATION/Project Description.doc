@@ -1,0 +1,13 @@
+Contents 
+
+
+Lab 1: Perform S3 Bucket Enumeration using Various S3 Bucket Enumeration Tool
+	Task 1: Enumerate S3 Buckets using lazys
+	Task 2: Enumerate S3 Buckets using S3Scanner 
+
+
+Lab 2: Exploit S3 Buckets 
+
+
+Lab 3: Perform Privilege Escalation to Gain Higher Privileges 
+	Task 1: Escalate IAM User Privileges by Exploiting Misconfigured User Policy 
