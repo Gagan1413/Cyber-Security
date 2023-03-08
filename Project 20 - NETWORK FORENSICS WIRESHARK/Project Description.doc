@@ -1,0 +1,2 @@
+In this in class activity we’ll try to identify Malware on a device using Wireshark. We’ll also try to use Hex Editor and other tools to confirm whether the detected file is a Malware or not to separate standard internet traffic from threats. Wireshark is a data packet analyzer which can be utilized in multiple ways when working with networks and network devices. 
+Hex Editor is a computer software that enables us to edit binary data in computer files.
